@@ -1,3 +1,4 @@
+package br.ce.fegodinho.steps;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -5,12 +6,13 @@ import java.util.Date;
 
 import org.junit.Assert;
 
+import br.ce.fegodinho.converters.DateConverter;
 import cucumber.api.Transform;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
 
-public class AprenderCucumber {
+public class AprenderCucumberSteps {
 	
 		   
 	@Dado("^que criei o arquivo corretamente$")
