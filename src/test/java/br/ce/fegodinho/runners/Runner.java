@@ -7,10 +7,10 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/resources/features/aprender_cucumber.feature",
+		features = "src/test/resources/features/alugar_filme.feature",
 		glue = "br.ce.fegodinho.steps",
-		tags = {"@tipo1,@tipo2"},
-		plugin = "pretty",
+		tags = {},
+		plugin = {"pretty", "html:target/report-html", "json:target/report.json"},
 		monochrome = true,
 		snippets = SnippetType.CAMELCASE,
 		dryRun = false,
