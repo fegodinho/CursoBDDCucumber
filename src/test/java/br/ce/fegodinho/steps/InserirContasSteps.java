@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import cucumber.api.PendingException;
+import cucumber.api.java.After;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
@@ -77,6 +77,11 @@ public class InserirContasSteps {
 	public void souNotificadoQueJáExisteUmaContaComEsseNome() throws Throwable {
 		String texto = driver.findElement(By.xpath("//div[@class='alert alert-danger']")).getText();
 	    Assert.assertEquals("Já existe uma conta com esse nome!", texto);
+	}
+	
+	@After
+	public void fecharBrowser() {
+		driver.quit();
 	}
 
 
